@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preset1</title>
+  <link rel="stylesheet" href="preset1.css">
+</head>
+<body>
+  <div class="sidebar">
+      <a onclick="hideBar()" class="cross" href="#"
+        ><img src="/img/cross.png" alt=""
+      /></a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="preset.html">My Presets</a>
+    </div>
+
+    <header>
+      <div class="header_tabs">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+        <a href="preset.html">My Presets</a>
+      </div>
+      <div onclick="showSidebar()" class="bar">
+        <img src="/img/menu.png" alt="bar" />
+      </div>
+
+      <div class="logo">
+        <a href="index.html"><img src="/img/logo.jpeg" alt="LOGO" /></a>
+      </div>
+      <div class="cart">
+        <a href="cart.html"><img src="/img/cart.svg" alt="Cart" /></a>
+        <p id="cart-value">0</p>
+      </div>
+    </header>
+
+    <div class="data">
+      <div class="images">
+        <img src="/img/pr1.jpg" alt="preset1">
+      </div>
+      <div class="para">
+        <h2>Nanami Edit Preset</h2>
+        <p class="price">1250 PKR</p>
+        <a class="preview" href="https://www.instagram.com/reel/CltzYRGvN-A/?igsh=NDcyeWFsMzQ5dHps" target="_blank">PREVIEW</a>
+        <p class="instruc">INSTALLATION- To do this, open the Alight Motion app > start creating a video > select Presets > Import Presets > select file from the correct destination > click Import. Now you will be allowed to preview the preset before using it on your video. So try it and apply the clip that you are about to create.</p>
+        <button id="add-to-cart-btn">Add to Cart</button>
+
+      </div>
+    </div>
+</body>
+ <script src="script.js"></script>
+</html>

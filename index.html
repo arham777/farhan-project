@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+  </head>
+
+  <body>
+    <div class="image_contain">
+      <div class="sidebar">
+        <a onclick="hideBar()" class="cross" href="#"
+          ><img src="/img/cross.png" alt=""
+        /></a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+        <a href="preset.html">My Presets</a>
+      </div>
+      <header>
+        <div class="header_tabs">
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+          <a href="preset.html">My Presets</a>
+        </div>
+        <div onclick="showSidebar()" class="bar">
+          <img src="/img/menu.png" alt="bar" />
+        </div>
+
+        <div class="logo">
+          <a href="index.html"><img src="/img/logo.jpeg" alt="LOGO" /></a>
+        </div>
+        <div class="cart">
+          <a href="cart.html"><img src="/img/cart.svg" alt="Cart" /></a>
+          <p id="cart-value">0</p>
+        </div>
+      </header>
+
+      <div class="main">
+        <div class="main_image">
+          <img src="/img/main1.jpeg" alt="Feature" />
+        </div>
+        <div class="main_para">
+          <h1>Farhan Ahmad</h1>
+          <p>Transform Moments into Masterpieces</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="res_color">
+      <div class="res_head">
+        <h1>Resources</h1>
+      </div>
+
+      <div class="resources">
+        <div id="res" class="res1">
+          <div id="res_img" class="res1_img">
+            <img src="/img/p3.jpg" alt="Presets" />
+          </div>
+          <div id="res_para" class="res1_para">
+            <h1>My Presets</h1>
+            <p>Emulate my editing style with a one of a kind editing system.</p>
+            <a href="preset.html"><button>Shop Now</button></a>
+          </div>
+        </div>
+        <div id="res" class="res2">
+          <div id="res_img" class="res2_img">
+            <img src="/img/p4.jpeg" alt="Presets" />
+          </div>
+
+          <div id="res_para" class="res2_para">
+            <h1>My Portfolio</h1>
+            <p>Here is my work</p>
+            <a href="portfolio.html"><button>Open</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="email_box">
+        <div class="mail_para">
+          <h2>Stay up to date</h2>
+          <p>
+            Sign up for my email list to be the first to know about sales, and
+            updates.
+          </p>
+        </div>
+        <div class="container">
+          <div class="mail">
+              <label for="email"></label>
+              <input type="email" id="email" placeholder="Enter your Email" required />
+              <input type="submit" value="Sign Up" onclick="signUp()" />
+          </div>
+      </div>
+
+        <div class="respect">
+          <p>I respect your privacy.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+</html>

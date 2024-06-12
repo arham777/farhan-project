@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Farhan Ahmad</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #FFFFFF;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .home  {
+            margin: 20px 40px;
+            padding: 12px 18px ;
+            color: white;
+            font-weight: 700;
+            border: none;
+            border-radius: 5px;
+            background-color: #008fa8;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all ease 0.2s;
+        }
+
+        /* .home:hover{
+            background-color: #0b525f;   
+        } */
+
+        .logo img {
+        width: 55px;
+        border-radius: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        }
+
+       
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #FFFFFF;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+        }
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1E1E1E;
+            color: #FFFFFF;
+        }
+        input[type="submit"] {
+            background-color: #008fa8;
+            cursor: pointer;
+            transition: all ease 0.2s;
+        }
+        input[type="submit"]:hover {
+            background-color: #0b525f;
+        }
+        .error {
+            color: #FF5252;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <a href="index.html"><img src="/img/logo.jpeg" alt="LOGO" /></a>
+      </div>
+    <!-- <a href="index.html" ><button class="home">Home</button></a> -->
+    <div class="container">
+        <h1>Contact Me</h1>
+        <form id="contactForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+            <span class="error" id="formError"></span>
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
+    <footer>
+        &copy; 2024 Farhan Ahmad. All rights reserved.
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Form validation
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const errorElement = document.getElementById('formError');
+            
+            if (!name || !email || !message) {
+                errorElement.textContent = 'All fields are required.';
+                return;
+            }
+            
+            if (!validateEmail(email)) {
+                errorElement.textContent = 'Please enter a valid email address.';
+                return;
+            }
+
+            // If validation passes, you can handle form submission here
+            // For example, send the form data via AJAX to a server
+
+            // Clear the form and show a success message
+            errorElement.textContent = '';
+            alert('Message sent successfully!');
+            document.getElementById('contactForm').reset();
+        });
+
+        function validateEmail(email) {
+            const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            return re.test(String(email).toLowerCase());
+        }
+    </script>
+</body>
+</html>

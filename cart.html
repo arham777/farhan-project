@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <a onclick="hideBar()" class="cross" href="#"
+        ><img src="/img/cross.png" alt=""
+      /></a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="preset.html">My Presets</a>
+    </div>
+    <header>
+      <div class="header_tabs">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+        <a href="preset.html">My Presets</a>
+      </div>
+      <div onclick="showSidebar()" class="bar">
+        <img src="/img/menu.png" alt="bar" />
+      </div>
+
+      <div class="logo">
+        <a href="index.html"><img src="/img/logo.jpeg" alt="LOGO" /></a>
+      </div>
+      <div class="cart">
+        <a href="cart.html"><img src="/img/cart.svg" alt="Cart" /></a>
+        <p>0</p>
+      </div>
+    </header>
+
+    <div class="cart_details">
+      <h2>Shopping Cart</h2>
+      <div class="items_data">
+        <div class="item_image"><img src="/img/pr1.jpg" alt="" /></div>
+        <div class="items">
+          <div class="items_front">
+            <h4>Nanami Edit Preset</h4>
+            <img id="cross_cart" src="/img/cross.png" alt="" />
+          </div>
+          <div class="price_details">
+            <div class="quantity">
+              <p>-</p>
+              <p>0</p>
+              <p>+</p>
+            </div>
+
+            <div class="item_price">
+              <p>1250 PKR</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>You have nothing in your shopping cart.</p>
+      <a href="preset.html" ><button>Continue Shopping</button></a>
+    </div>
+
+    <div class="total_tab">
+      <p>Subtotal</p>
+      <p>1250 PKR</p>
+      <button>Checkout</button>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
